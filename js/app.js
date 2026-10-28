@@ -31,11 +31,12 @@ datosListaVS.forEach((dato) => {
   listaVS.appendChild(li);
 });
 
-let main = document.getElementById("main");
 const seccionVSCode = document.getElementById("seccionVSCode");
 const seccionVS = document.getElementById("seccionVS");
 const separador = document.getElementById("separador");
 const infoMostrados = document.getElementById("infoMostrados");
+const mensajeError = document.getElementById("mensajeError");
+mensajeError.className = "esconder";
 
 let botonVSCode = document.getElementById("BotonVSCode");
 let botonVS = document.getElementById("BotonVS");
@@ -78,6 +79,7 @@ function mostrarVSCode() {
   seccionVS.className = "esconder";
   seccionVSCode.className = "mostrar";
   separador.className = "esconder";
+  mensajeError.className = "esconder";
 }
 
 function mostrarVS() {
@@ -85,6 +87,7 @@ function mostrarVS() {
   seccionVS.className = "mostrar";
   seccionVSCode.className = "esconder";
   separador.className = "esconder";
+  mensajeError.className = "esconder";
 }
 
 // Cuando se muetran ambos escribo en la consola que se estan mostrando ambos
@@ -96,4 +99,30 @@ function mostrarAmbos() {
   seccionVS.className = "mostrar";
   seccionVSCode.className = "mostrar";
   separador.className = "mostrar";
+  mensajeError.className = "esconder";
 }
+
+function noEncontrado() {
+  infoMostrados.textContent = "Mostrando: ninguno";
+
+  seccionVS.className = "esconder";
+  seccionVSCode.className = "esconder";
+  separador.className = "esconder";
+  mensajeError.className = "mostrar";
+}
+
+
+const barraDeBusqueda = document.getElementById("barraDeBusqueda");
+barraDeBusqueda.addEventListener("input", () => {
+  const filtro = barraDeBusqueda.value.toLowerCase();
+
+  if("visual studio".includes(filtro) || filtro == "" ){
+    mostrarAmbos();
+  }else if("code".includes(filtro) || "visual studio code".includes(filtro)) {
+    mostrarVSCode();
+  }else if("vs".includes(filtro)) {
+    mostrarVS();
+  }else{
+    noEncontrado();
+  }
+});
