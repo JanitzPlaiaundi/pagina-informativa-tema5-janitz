@@ -21,7 +21,7 @@ Aplicación web interactiva desarrollada con **HTML5**, **CSS3** y **JavaScript 
 
 ![Imagen de la pestaña de red](red.png)
 
---
+---
 
 ## 🚀 Instrucciones de Ejecución
 
