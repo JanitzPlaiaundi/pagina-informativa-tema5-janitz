@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pagina informativa VS</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/app.js" defer></script>
+    <script src="js/main.js" type="module" defer></script>
+    <script src="js/interfaz.js" type="module" defer></script>
   </head>
   <body>
     <a style="position: absolute; top: 20px; left: 20px;" href=".." aria-label="Boton volver atras"><img src="../assets/whiteArrowBack.svg" alt="" width="50"></a>
@@ -27,7 +28,7 @@
       </div>
       <h1>Pagina informativa Visual Studio y Visual Studio Code</h1>
     </header>
-    <main id="main">
+    <main>
       <section id="seccionVSCode">
         <img
           src="images/visualStudioCode.png"
@@ -36,14 +37,7 @@
           height="100"
         />
         <h2>Visual Studio Code</h2>
-        <ul>
-          <li>Ligero</li>
-          <li>Multiplataforma</li>
-          <li>Consumo bajo</li>
-          <li>Gratuito y codigo abierto</li>
-          <li>Adaptable mediante extensiones</li>
-          <li>Depuracion ligera</li>
-        </ul>
+        <ul id="listaVSCode"></ul>
       </section>
       <div id="separador"></div>
       <section id="seccionVS">
@@ -54,15 +48,10 @@
           height="100"
         />
         <h2>Visual Studio</h2>
-        <ul>
-          <li>Completo</li>
-          <li>Solo Windows</li>
-          <li>Consumo alto</li>
-          <li>De pago para empresas</li>
-          <li>Mas herramientas sin extensiones</li>
-          <li>Depuracion avanzada</li>
-        </ul>
+        <ul id="listaVS"></ul>
       </section>
+      <input type="text" id="barraDeBusqueda" placeholder="Buscar...">
+      <span id="mensajeError">No se encontraron resultados</span>
       <div id="contenedorNavegacion">
         <nav id="navegacion">
           <button id="BotonVSCode">VSCode</button>
