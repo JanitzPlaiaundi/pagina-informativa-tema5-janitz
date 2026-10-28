@@ -27,7 +27,7 @@
       </div>
       <h1>Pagina informativa Visual Studio y Visual Studio Code</h1>
     </header>
-    <main id="main">
+    <main>
       <section id="seccionVSCode">
         <img
           src="images/visualStudioCode.png"
@@ -36,14 +36,7 @@
           height="100"
         />
         <h2>Visual Studio Code</h2>
-        <ul>
-          <li>Ligero</li>
-          <li>Multiplataforma</li>
-          <li>Consumo bajo</li>
-          <li>Gratuito y codigo abierto</li>
-          <li>Adaptable mediante extensiones</li>
-          <li>Depuracion ligera</li>
-        </ul>
+        <ul id="listaVSCode"></ul>
       </section>
       <div id="separador"></div>
       <section id="seccionVS">
@@ -54,15 +47,10 @@
           height="100"
         />
         <h2>Visual Studio</h2>
-        <ul>
-          <li>Completo</li>
-          <li>Solo Windows</li>
-          <li>Consumo alto</li>
-          <li>De pago para empresas</li>
-          <li>Mas herramientas sin extensiones</li>
-          <li>Depuracion avanzada</li>
-        </ul>
+        <ul id="listaVS"></ul>
       </section>
+      <input type="text" id="barraDeBusqueda" placeholder="Buscar...">
+      <span id="mensajeError">No se encontraron resultados</span>
       <div id="contenedorNavegacion">
         <nav id="navegacion">
           <button id="BotonVSCode">VSCode</button>
