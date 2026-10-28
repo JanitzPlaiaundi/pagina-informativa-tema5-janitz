@@ -37,6 +37,9 @@ botonVS.addEventListener("click", () => {
   
 
 })
+
+
+// Cuando se pulsa el boton de ambos se ejecuta la funcion mostrarAmbos() que hace que se muestren ambos y se escriba en la consola que se estan mostrando
 botonAmbos.addEventListener("click", mostrarAmbos)
 
 function mostrarVSCode() {
@@ -51,8 +54,10 @@ function mostrarVS(){
   separador.className = "esconder"
 }
 
+
+// Cuando se muetran ambos escribo en la consola que se estan mostrando ambos
 function mostrarAmbos(){
-  console.log("Mostrar ambos")
+  console.log("Aviso por consola: mostrando ambos")
   infoMostrados.textContent = "Mostrando ambos"
   seccionVS.className = "mostrar"
   seccionVSCode.className = "mostrar"
