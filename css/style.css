@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+    color: white;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #151515;
+}
+
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+main{
+    flex: 1;
+    background-color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    position: relative;
+}
+
+main section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+}
+
+main section h2{
+    font-size: 2rem;
+}
+
+main section ul {
+    display: flex ;
+    flex-direction: column;
+    gap: 6px;
+    list-style: none;
+}
+
+main section ul li{
+    font-size: 1.5rem;
+}
+
+#separador {
+    border-left: 1px solid white;
+    height: 500px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #151515;
+}
+
+footer div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+}
+
+.listaFooter{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+#contenedorNavegacion{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#navegacion{
+    display: flex; 
+    gap: 20px;
+}
+
+#navegacion button {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid #333333;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#navegacion button:hover{
+  background-color: #333333;
+  transform: scale(1.05);
+}
+
+#infoMostrados {
+    font-size: 1rem;
+}
+
+.esconder{
+    display: none;
+}
+.mostrar{
+    display: flex;
+}
+
